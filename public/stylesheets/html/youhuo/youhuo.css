@@ -1,0 +1,64 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:"Microsoft Yahei";
+}
+#banner{
+	width:1150px;
+	height:450px;
+	overflow:hidden;
+	margin:50px auto 5px;
+	position:relative;
+}
+#banner label{
+	z-index:1;
+	width:10px;
+	height:100px;
+	position:absolute;
+	font-size:10px;
+	color:white;
+	font-weight:bold;
+	text-align:center;
+	line-height:100px;
+	background:rgba(45,45,45,.15);
+	top:175px;
+	box-shadow:0px 0px 50px white inset;
+	opacity:0.3;
+	cursor:pointer;
+	border-radius:3px;
+	border:1px solid gray;
+}
+#banner label:hover{
+	width:30px;
+	font-size:30px;
+	opacity:0.6;
+}
+#left{
+	right:0px;
+}
+#right{
+	left:0px;
+}
+
+#banner ul li{
+	z-index:0;
+	list-style:none;
+	position:absolute;
+	left:1150px;
+	top:0px;
+}
+#bn{
+	width:1152px;
+	height:54px;
+	margin:0px auto;
+}
+#bn ul li{
+	list-style:none;
+	float:left;
+	width:138px;
+	height:100%;
+	margin-right:4px;
+	margin-left:2px;
+	opacity:0.3;
+	cursor:pointer;
+}

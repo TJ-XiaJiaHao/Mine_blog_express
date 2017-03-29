@@ -1,0 +1,427 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:'Microsoft YaHei UI';
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+/*vars*/
+:root{
+    --width-per:100%;
+    --min-width:600px;
+    --header-height:40px;
+    --margin-box:0px auto 0px;
+}
+
+
+/*header*/
+#header{
+    width:var(--width-per);
+    min-width:var(--min-width);
+    height:var(--header-height);
+    margin:var(--margin-box);
+    position: relative;
+    z-index: 10;
+    background:black;
+    /*position: absolute;*/
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
+}
+#header:hover{
+    background: black;
+    opacity:1.0;
+}
+#header:hover+#banner>#search-box{
+    opacity:0;
+}
+/*#header:hover+#banner{
+    -webkit-transition: filter 1s;
+    -moz-transition: filter 1s;
+    -ms-transition: filter 1s;
+    -o-transition: filter 1s;
+    transition: filter 1s;
+
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+}*/
+#header:hover+#banner>#banner-copy{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 8;
+    background: rgba(0,0,0,0.6);
+}
+#logo{
+    height:80%;
+    width:200px;
+    position: absolute;
+    top:10%;
+    left:20px;
+    background:darkgray;
+    cursor:pointer;
+}
+#logo img{
+    height:100%;
+    width:100%;
+}
+#user{
+    height:100%;
+    width:150px;
+    position:absolute;
+    right:20px;
+    text-align: right;
+}
+#login,#register{
+    display:inline-block;
+    width:50px;
+    height:100%;
+    line-height:var(--header-height);
+    color:white;
+    border-radius:2px;
+    //background: #00b7ee;
+    margin-left:20px;
+    text-align: center;
+    //margin-top:2.5%;
+    font-weight:bold;
+    cursor:pointer;
+}
+#login:hover,#register:hover{
+    background: white;
+    color:black;
+}
+
+
+
+
+
+/*banner*/
+#banner{
+    min-width:var(--min-width);
+    height:66%;
+    width:100%;
+    overflow: hidden;
+    z-index: 5;
+    position: relative;
+}
+#banner ul{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+#banner ul li{
+    position: absolute;
+    list-style:none;
+    opacity:0;
+    width:100%;
+    height:100%;
+}
+#banner ul li img{
+    width:100%;
+    height:100%;
+}
+#search-box{
+    background:white;
+    border-radius:50px;
+    height:50px;
+    width:25%;
+    z-index: 10;
+    position:absolute;
+    top:40%;
+    left:38%;
+    min-width: 50px;
+    min-height:10px;
+    background: rgba(255,255,255,0.4);
+}
+#search-box:hover{
+    background: rgba(255,255,255,0.8);
+}
+
+#search-input{
+    margin-left:6%;
+    height:96%;
+    width:88%;
+    border:none;
+    text-align:center;
+    background: rgba(0,0,0,0);
+    font-size:30px;
+    color:white;
+    font-weight: bold;
+    outline:0;
+    font-family: 'Lucida Grande';
+}
+#search-input-after{
+    text-align: left;
+}
+
+
+
+
+
+/*cities-banner*/
+#cities-banner{
+    width:100%;
+    min-width: var(--min-width);
+    height:200px;
+    /*background: rgba(0,0,0,0.4);*/
+    overflow: hidden;
+    /*position:absolute;*/
+    /*top:70%;
+    padding-top: 2%;*/
+    z-index:10;
+}
+#cities-banner ul{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: hidden;
+    float:left;
+}
+#cities-banner ul li{
+    list-style: none;
+    float:left;
+    width:200px;
+    height:80%;
+    position: absolute;
+    left:20px;
+    top:10%;
+
+}
+#cities-banner ul li img{
+    width:100%;
+    height:100%;
+}
+#cities-banner ul li label{
+    display: inline-block;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top:0px;
+    color:white;
+    opacity:0;
+    font-weight:900;
+    cursor:pointer;
+    text-align: center;
+    font-size:50px;
+    line-height:160px;
+}
+#cities-banner ul li label:hover{
+    opacity:0.8;
+}
+
+
+
+
+
+
+/*body*/
+#recommended{
+    width:18%;
+    float:left;
+    height:300px;
+    margin-top:4%;
+    margin-left:2%;
+    border:1px solid gray;
+}
+#recommended-title{
+
+}
+#body{
+    width:80%;
+    min-width:var(--min-width);
+    margin-left:20%;
+}
+#body-title{
+    text-align: center;;
+}
+#body ul{
+    width:100%;
+}
+#body ul li{
+    width:100%;
+    list-style:none;
+    margin-top:50px;
+}
+.travelogue-info{
+    height:400px;
+    width:100%;
+}
+.travelogue-info-left{
+    width:25%;
+    height:100%;
+    float:left;
+    position: relative;
+}
+.travelogue-info-left-head img{
+    width:100px;
+    height:100px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    position: absolute;
+    right:20%;
+    top:20%;
+}
+.travelogue-info-left-username{
+    font-weight:bold;
+    font-size:25px;
+    position: absolute;
+    right:20%;
+    top:45%;
+}
+.travelogue-info-left-time{
+    font-weight:700;
+    font-size:15px;
+    color:gray;
+    position: absolute;
+    top:55%;
+    right:20%;
+}
+.travelogue-info-right{
+    margin-left:25%;
+    width:70%;
+    height:100%;
+    border:1px solid gray;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 1px gray;
+}
+.travelogue-info-right-con{
+    width:70%;
+    height:100%;
+    float:left;
+}
+.travelogue-info-right-con-title{
+    margin-top:8%;
+    margin-left:10%;
+    cursor:pointer;
+}
+.travelogue-info-right-con-title:hover{
+    color:blue;
+}
+.travelogue-info-right-img{
+    width:29.7%;
+    height:100%;
+    float:left;
+}
+.travelogue-info-right-img img{
+    width:100%;
+    height:100%;
+    right:0px;
+}
+.travelogue-info-right-con-info{
+    margin-top:2%;
+    height:30px;
+    margin-left: 8%;
+}
+.travelogue-info-right-con-day,.travelogue-info-right-con-cost{
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    display: inline-block;
+    height:100%;
+    line-height:30px;
+    margin-left:5px;
+    background: red;
+    color:white;
+    padding-top:2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.travelogue-info-right-con-cost{
+    background:green;
+}
+.travelogue-info-right-con-para{
+    width:85%;
+    height:55%;
+    margin-top:4%;
+    margin-left:10%;
+    cursor: pointer;
+    color: gray;
+}
+.travelogue-info-right-con-para:hover{
+    text-underline: blue;
+    text-decoration: underline;
+}
+.travelogue-info-right-con-footer{
+    width:100%;
+    height:10%;
+    position:relative;
+}
+.travelogue-info-right-con-pos,.travelogue-info-right-con-like,.travelogue-info-right-con-comment{
+    color:white;
+    border-radius: 10px;
+    height:60%;
+    position: absolute;
+    cursor:pointer;
+}
+.travelogue-info-right-con-pos{
+    left:10%;
+}
+.travelogue-info-right-con-like{
+    right:30%;
+}
+.travelogue-info-right-con-comment{
+    right:10%;
+}
+.travelogue-info-right-con-pos img,.travelogue-info-right-con-like img,.travelogue-info-right-con-comment img{
+    height:100%;
+    width:30px;
+    float:left;
+}
+.travelogue-info-right-con-pos label,.travelogue-info-right-con-like label,.travelogue-info-right-con-comment label{
+    color:gray;
+    display: inline-block;
+    margin-top:3px;
+}
+.travelogue-info-right-con-like label{
+    color:red;
+}
+
+
+/*footer*/
+#footer{
+    width:100%;
+    height:200px;
+    margin-top:50px;
+    background: #363A53;
+}
+#footer-left{
+    width:25%;
+    height:100%;
+    text-align: right;
+    color:white;
+    float:left;
+}
+#footer-left h1{
+    font-weight:bold;
+    width:100%;
+    display: inline-block;
+    margin-top:20%;
+}
+#footer-right{
+    width:30%;
+    height:100%;
+    text-align: left;
+    color:white;
+    float:left;
+    margin-left:10%;
+}
+#footer-right h3{
+    font-weight:700;
+    width:100%;
+    display: inline-block;
+    margin-top:15%;
+}
+
