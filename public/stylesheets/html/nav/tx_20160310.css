@@ -1,0 +1,59 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-image:url("/images/html/nav/bg.jpg");
+}
+#baidu{
+	width:910px;
+	height:315px;
+	margin:200px auto;
+}
+#baidu .nav ul li{
+	list-style:none;
+	color:white;
+	height:35px;
+	text-align:center;
+	line-height:35px;
+	font-family:'Microsoft Yahei';
+	font-size:14px;
+	cursor:pointer;
+}
+#baidu .nav ul .news{
+	background-image:url("/images/html/nav/button.png");
+}
+#baidu .nav{
+	width:80px;
+	height:315px;
+	float:left;
+	background:rgba(0,0,0,0.6);
+}
+#baidu .con{
+	width:810px;
+	height:315px;
+	float:right;
+	position:relative;
+	overflow:hidden;
+}
+#baidu .con ul li{
+	list-style:none;
+	width:810px;
+	height:315px;
+	position:absolute;
+	left:0;
+	top:-315px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+/*table*/
+#table{
+    width:var(--width-per);
+    min-width:var(--min-width);
+    margin:10px auto;
+}
+.trade-table{
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+.trade-table thead{
+    color: antiquewhite;
+    background: #555555
+}
+
+
+
+/*floats*/
+#floats{
+    width:var(--width-per);
+    min-width: var(--min-width);
+    height:400px;
+    margin:10px auto 0px;
+    overflow: hidden;
+}
+.float{
+    text-align: center;
+    border-radius:15px;
+    float: left;
+    height:100%;
+}
+
+.img-width{
+    width: 34%;
+    float:left;
+}
+
+.font-width{
+    width: 31%;
+}
+.panel{
+    height:100%;
+}
+.panel-color{
+    background: #7A8B8B;
+}
+
+.title-color{
+    color: antiquewhite;
+}
+
+.img-container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.img{
+    width:100%;
+    height:60%;
+}
+.panel-body{
+    margin-top: 10px;
+    position: relative;
+    height:85%;
+}
+.panel-body p{
+    text-align: left;
+    word-wrap: break-word;
+    position:relative;
+}
+.panel-body button{
+    float: right;
+    position:absolute;
+    right:10px;
+    bottom:0px;
+}
+.panel-body li{
+    text-align: left;
+    margin: 18px 0;
+    font-size: 20px;
+}
+.panel-body ul li{
+    list-style: none;
+}
+
+.news-panel{
+    width:var(--width-per);
+    min-width: var(--min-width);
+    margin:10px auto 0px;
+}
+
+.news-img{
+    width:80%;
+    height: 80%;
+}
+
+.news-width{
+    width: 25%;
+}

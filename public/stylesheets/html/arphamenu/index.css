@@ -1,0 +1,136 @@
+ul{
+	list-style-type:none;
+}
+/*info-bar中的内容位置*/
+.page_user{
+	margin-left:-10px;
+}
+.page_comment{
+	margin-left:-15px;
+}
+.mine_posted {
+	margin-left:-23px;
+}
+.page_user img{
+	vertical-align:text-top;
+}
+.page_comment img{
+	vertical-align:text-bottom;
+}
+.mine_posted img{
+	height:20px;
+	width:20px;
+	vertical-align:-25%;
+}
+.mine_like_img{
+	margin-left:3px;
+}
+.page_user_num{
+	margin-left:8px;
+	font-size:16px;
+	color:white;
+}
+.page_comment_num{
+	color:white;
+	margin-left:8px;
+	font-size:30px;
+	font-weight:600;
+}
+.mine_posted_num,.mine_like_num{
+	margin-left:1px;
+	color:#079E6E;
+	font-weight:900;
+	font-size:16px;
+}
+/*info-bar的设置*/
+#info-bar{
+	position:absolute;
+	border-radius:100%;
+	width:0;
+	height:0px;
+	background-color:gray;
+	margin-top:25px;
+	margin-left:45px;
+	overflow:hidden;
+	transition:all 200ms;
+}
+/*其他按钮的设置*/
+#button{
+	position:relative;
+	margin-left:50%;
+	margin-top:400px;
+}
+.unread{
+	color:white;
+	position:absolute;
+	background-color:red;
+	width:10px;
+	height:10px;
+	font-size:12px;
+	font-weight:600px;
+	margin-left:-10px;
+	margin-top:6px;
+	padding-bottom:4px;
+	padding-left:4px;
+	border-radius:50%;
+}
+.mask_button,.history_button,.message_button,.setting_button,.sign_button,.icon{
+	position:absolute;
+	border-radius:50%;
+	width:0px;
+	height:0px;
+	background-color:gray;
+	transition:all 200ms;
+	overflow:hidden;
+}
+.icon{
+	background-image:url(/images/html/arphamenu/atplus_white.png);
+	transform:scale(1);
+	height:30px;
+	width:30px;
+	margin-left:40px;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+/*移动到上面时的效果*/
+#button:hover .icon{
+	background-image:url("/images/html/arphamenu/atplus_green.png");
+	background-color:rgba(48, 63, 159, 1);
+	background-repeat:no-repeat;
+	background-size:25px 20px;
+	transform:scale(2);
+}
+#button:hover  #info-bar{
+	width:110px;
+	height:110px;
+	transform:scale(1) translate(-40px,-160px);
+}
+#button:hover .mask_button{
+	width:40px;
+	height:40px;
+	transform:scale(1)translate(-60px,-40px);
+}
+#button:hover  .history_button{
+	width:40px;
+	height:40px;
+	transform:scale(1)translate(-80px,0px);
+}
+#button:hover  .message_button{
+	width:40px;
+	height:40px;
+	transform:scale(1)translate(-60px,40px);
+}
+#button:hover  .setting_button{
+	width:40px;
+	height:40px;
+	transform:scale(1)translate(-20px,60px);
+}
+#button:hover  .sign_button{
+	width:40px;
+	height:40px;
+	transform:scale(1)translate(25px,55px);
+}
+.mask_button img,.history_button img,.message_button img,.setting_button img,.sign_button img,.icon img{
+	padding-top:9px;
+	padding-left:9px;
+}

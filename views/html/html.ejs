@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/nav.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/html/html.css">
     <script type="text/javascript" src="javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/nav.js"></script>
     <script type="text/javascript" src="javascripts/html/html.js"></script>
 </head>
 <body>
@@ -13,21 +14,634 @@
     <!--nav-->
     <nav id="nav">
         <ul>
-            <li class="nav-choosed">个人主页</li>
-            <li>课程笔记</li>
-            <li>实战项目</li>
-            <li>网站专区</li>
-            <li>教程专区</li>
+            <li id="nav-home">个人主页</li>
+            <li id="nav-note">课程笔记</li>
+            <li id="nav-projects">实战项目</li>
+            <li class="nav-choosed" id="nav-html">网站专区</li>
+            <li id="nav-course">教程专区</li>
         </ul>
     </nav>
+    <div id="nav-bg"></div>
+
+    <!--nav second-->
+    <div id="nav-second">
+        <ul>
+            <li><label class="nav-second-choosed">全部</label>|</li>
+            <li><label>完整前端项目</label>|</li>
+            <li><label>导航栏专区</label>|</li>
+            <li><label>轮播图专区</label>|</li>
+            <li><label>动态特效专区</label>|</li>
+            <li><label>课程作业专区</label>|</li>
+            <li><label>div+css布局</label></li>
+        </ul>
+    </div>
+    <div id="nav-second-bg"></div>
+
+
 
     <!--demo-->
-    <ul id="htmls">
-        <li><img src="images/html/html-clock.png"/><div class="men"><label id="clock">时钟</label></div></li>
-        <li><img src="images/html/html-youhuo.png"/><div class="men"><label id="youhuo">有货</label></div></li>
-        <li><img src="images/html/html-youji.png"/><div class="men"><label id="youji">游记</label></div></li>
-        <li><img src="images/html/html-projectCom.png"/><div class="men"><label id="projectCom">项目交流</label></div></li>
-    </ul>
+    <!--完整前端项目-->
+    <div id="project-box" class="box">
+        <div class="head-title"><label>完整前端项目</label></div>
+        <ul class="box-ul">
+            <!--期货系统-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-futures.png"/>
+                    <div class="men">
+                        <label id="futures">期货系统</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">期货分析预测系统交易界面</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">挑战杯参赛项目</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css + ajax + nodejs + jQuery</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/futures" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--导航栏专区-->
+    <div id="nav-box" class="box">
+        <div class="head-title"><label>导航栏专区</label></div>
+        <ul class="box-ul">
+
+            <!--3d滚动导航栏-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-threedme.png"/>
+                    <div class="men">
+                        <label id="threedme">3d导航栏</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">3d滚动导航栏</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">腾讯课堂20160312</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">JS + transform + transition</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/threedme" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+            <!--动态导航-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-nav.png"/>
+                    <div class="men">
+                        <label id="nav0">动态导航</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">动态导航</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">腾讯课堂20160310</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css + JQuery</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/nav" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+            <!--圆形菜单栏-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-arpha.png"/>
+                    <div class="men">
+                        <label id="arpha">圆形菜单栏</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">圆形菜单栏</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">中山大学web课程课后练习</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">transform + transition</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/arpha" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--轮播图专区-->
+    <div id="banner-box" class="box">
+        <div class="head-title"><label>轮播图专区</label></div>
+        <ul class="box-ul">
+            <!--有货轮播图-->
+            <li>
+            <div class="pic">
+                <img src="images/html/html-youhuo.png"/>
+                <div class="men">
+                    <label id="youhuo">有货</label>
+                </div>
+            </div>
+            <div class="description">
+                <table>
+                    <tr>
+                        <td class="tb-key">名称：</td>
+                        <td calss="td-value">有货轮播图</td>
+                    </tr>
+                    <tr>
+                        <td class="tb-key">来源：</td>
+                        <td calss="td-value">腾讯课堂20160324</td>
+                    </tr>
+                    <tr>
+                        <td class="tb-key">主要技术：</td>
+                        <td calss="td-value">jQuery + animate</td>
+                    </tr>
+                    <tr>
+                        <td class="tb-key">难度：</td>
+                        <td>
+                            <div class="stars">
+                                <img class = "start-bling" src="/images/html/star.png"/>
+                                <img class = "start-bling" src="/images/html/star.png"/>
+                                <img class = "start-none" src="/images/html/star.png"/>
+                                <img class = "start-none" src="/images/html/star.png"/>
+                                <img class = "start-none" src="/images/html/star.png"/>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">源码下载</a></td>
+                        <td><a href="/html/youhuo" target="_blank">查看效果</a></td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+        </ul>
+    </div>
+
+    <!--JS动态效果-->
+    <div id="js-box" class="box">
+        <div class="head-title"><label>动态特效专区</label></div>
+
+        <ul class="box-ul">
+            <!--3d小车-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-car.png"/>
+                    <div class="men">
+                        <label id="car">3d小车</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">旋转的3d小车</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">百度前端学院</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">THREEJS</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/car" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+            <!--行走的时钟页面-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-clock.png"/>
+                    <div class="men">
+                        <label id="clock">时钟</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">行走的时钟</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">大众点评2015校招编程题</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">transform + transition</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/clock" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--课内作业-->
+    <div id="course-box" class="box">
+        <div class="head-title"><label>课程作业专区</label></div>
+        <ul class="box-ul">
+            <!--电梯-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-lift.png"/>
+                    <div class="men">
+                        <label id="lift">电梯</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">电梯调度策略</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">操作系统调度模块练习</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css + JQuery</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/lift" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!--div+css布局类-->
+    <div id="div-css-box" class="box">
+        <div class="head-title"><label>div+css布局</label></div>
+        <ul class="box-ul">
+
+            <!--天猫-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-tianmao.png"/>
+                    <div class="men">
+                        <label id="tianmao">天猫购物</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">天猫购物平台</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">腾讯课堂20160320</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css + JQuery</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/tianmao" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+            <!--游记页面-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-youji.png"/>
+                    <div class="men">
+                        <label id="youji">游记</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">papas游记</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">Java EE课程第一次讨论项目（废）</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css + animate</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/youji" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+
+            <!--项目交流平台-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-projectCom.png"/>
+                    <div class="men">
+                        <label id="projectCom">项目交流</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">大学生项目交流平台</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">上创第一次讨论项目（废）</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/projectcommunication" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+
+            <!--忍者神龟-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-renzheshengui.png"/>
+                    <div class="men">
+                        <label id="renzheshengui">忍者神龟</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">忍者神龟</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">中山大学web课程某次练习</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/renzheshengui" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+
+            <!--简易计算器-->
+            <li>
+                <div class="pic">
+                    <img src="images/html/html-calculate.png"/>
+                    <div class="men">
+                        <label id="calculate">简易计算器</label>
+                    </div>
+                </div>
+                <div class="description">
+                    <table>
+                        <tr>
+                            <td class="tb-key">名称：</td>
+                            <td calss="td-value">简易计算器</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">来源：</td>
+                            <td calss="td-value">中山大学web课程某次练习</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">主要技术：</td>
+                            <td calss="td-value">div + css</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-key">难度：</td>
+                            <td>
+                                <div class="stars">
+                                    <img class = "start-bling" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+                                    <img class = "start-none" src="/images/html/star.png"/>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">源码下载</a></td>
+                            <td><a href="/html/calculate" target="_blank">查看效果</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
 </body>
 
 </html>

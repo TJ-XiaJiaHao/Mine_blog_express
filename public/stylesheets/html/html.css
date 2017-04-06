@@ -1,21 +1,90 @@
-#htmls{
+/*二级导航栏*/
+#nav-second{
+    position: fixed;
+    width:100%;
+    height:30px;
+    top:50px;
+    z-index: 1000;
+    background: white;
+}
+#nav-second-bg{
+    width:100%;
+    height:30px;
+}
+#nav-second ul{
     width:80%;
+    margin:5px 10%;
+    height:100%;
+}
+#nav-second ul li{
+    list-style:none;
+    float:left;
+    width:130px;
+    height:100%;
+}
+#nav-second ul li label{
+    width:95%;
+    height:100%;
+    display: inline-block;
+    line-height:20px;
+    text-align: center;
+    cursor: pointer;
+}
+#nav-second ul li label:hover{
+    color:#53a7e2;
+}
+.nav-second-choosed{
+    color:#53a7e2;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+}
+
+/*分类展示块*/
+.box{
+    width:80%;
+    min-width:800px;
     margin:0 auto;
 }
-#htmls li{
-    list-style:none;
+.head-title{
+    margin:20px auto 20px;
+    font-size:22px;
+    width:100%;
+    height:50px;
+    border-bottom:1px solid rgba(0,0,0,0.3);
+    display: none;
+}
+.head-title label{
+    color:#53a7e2;
+    cursor: pointer;
+}
+.box-ul{
+    width:100%;
+}
+
+
+/*单个页面展示区*/
+.box-ul li{
+    list-style: none;
+    width:100%;
+    height:300px;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+
+/*照片展示块*/
+.pic{
     width:45%;
-    height:250px;
-    margin-top:50px;
-    margin-right:4.5%;
-    float:left;
+    height:80%;
+    margin-top:30px;
     position: relative;
     cursor:pointer;
+    float:left;
 }
-#htmls li:hover .men{
+.pic:hover .men{
     visibility: visible;
 }
-#htmls li img{
+.pic img{
     width:100%;
     height:100%;
 }
@@ -34,7 +103,7 @@
     height:50px;
     line-height:50px;
     border:4px solid white;
-    margin-top:100px;
+    margin-top:90px;
     color:white;
     font-size:30px;
     font-weight:bold;
@@ -43,3 +112,36 @@
 .men label:hover{
     text-decoration: underline;
 }
+
+
+/*文字介绍块*/
+.description{
+    float:left;
+    margin-left:100px;
+    margin-top:30px;
+}
+.description table tr td{
+    height:43px;
+    color: #666;
+    font-size:16px;
+}
+.tb-key{
+    width:100px;
+    font-weight:bold;
+}
+.stars{
+    width:120px;
+    height:24px;
+    overflow: hidden;
+}
+.stars img{
+    float:left;
+    width:23px;
+    height:48px;
+}
+.start-bling{
+    margin-top:-27px;
+    top:-24px;
+}
+
+

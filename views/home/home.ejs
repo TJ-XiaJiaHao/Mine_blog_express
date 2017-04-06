@@ -1,0 +1,310 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人简历</title>
+    <link rel='stylesheet' href='/stylesheets/nav.css' />
+    <script src="/javascripts/html/futures/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/nav.js"></script>
+    <style type="text/css">
+        <!--
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            width:100%;
+            height:100%;
+        }
+        body{
+            width:100%;
+            height:100%;
+        }
+        #body{
+            width:70%;
+            min-width:900px;
+            min-height:800px;
+            margin:20px auto;
+            background: rgb(249,249,249);
+            font-family: "微软雅黑",Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        /*顶部标题*/
+        #head{
+            height:40px;
+            line-height:40px;
+            text-align: right;
+            background: #f3f3f3;
+            border:1px solid #dedede;
+            position:relative;
+        }
+        #head label{
+            position: absolute;
+            right:20px;
+            font-size:14px;
+            font-weight:bold;
+        }
+        /*主体内容*/
+        #tables{
+            width:80%;
+            min-width: 800px;
+            margin:0 auto;
+        }
+        .tb-tr{
+            font-size:14px;
+            color:#53a7e2;
+            height:36px;
+            line-height:36px;
+            font-weight:bold;
+        }
+        .tb-key,.tb-value{
+            height:30px;
+            line-height:30px;
+            color:#666;
+            font-size:12px;
+        }
+        .tb-key{
+            width:80px;
+            font-weight:bold;
+        }
+        .tb-value{
+            width:270px;
+        }
+        #tb-per-eval td,#tb-practice .tb-value,#tb-projects .tb-value,#tb-win .tb-value{
+            width:600px;
+        }
+        hr{
+            opacity:0.5;
+        }
+        /*尾页*/
+        #thx{
+            margin:20px auto 20px;
+            text-align: center;
+            font-size:14px;
+            color:#666;
+        }
+        -->
+    </style>
+</head>
+
+<body>
+
+
+<!--nav-->
+<nav id="nav">
+    <ul>
+        <li class="nav-choosed" id="nav-home">个人主页</li>
+        <li id="nav-note">课程笔记</li>
+        <li id="nav-projects">实战项目</li>
+        <li id="nav-html">网站专区</li>
+        <li id="nav-course">教程专区</li>
+    </ul>
+</nav>
+<div id="nav-bg"></div>
+
+<div id="body">
+    <div id="head"><label>个人简历</label></div>
+
+    <div id="tables">
+        <table id="tb-basic-info" class="table"></table><hr/>
+        <table id="tb-per-eval" class="table"></table><hr/>
+        <table id="tb-edu" class="table"></table><hr/>
+        <table id="tb-practice" class="table"></table><hr/>
+        <table id="tb-projects" class="table"></table><hr/>
+        <table id="tb-win" class="table"></table><hr/>
+        <table id="tb-skills" class="table"></table>
+    </div>
+</div>
+
+<div id="thx">谢谢观看~</div>
+</body>
+
+<script type="text/javascript">
+
+    var keys;
+    var values;
+
+    /*添加表格标题*/
+    function addHead(dom,value) {
+        dom.innerHTML += "<tr></tr>";
+        var trs = dom.getElementsByTagName("tr");
+        var len = trs.length;
+        trs[len - 1].innerHTML += "<td class = 'tb-tr'>" + value + "</td>";
+
+    }
+
+    /*添加一行表格内容，dom为表元素，keys为关键字，values为值*/
+    function addTR(dom,keys,values){
+        dom.innerHTML += "<tr></tr>";
+        var trs = dom.getElementsByTagName("tr");
+        var len = trs.length;
+        for(var i = 0; i < keys.length ; i++){
+            trs[len - 1].innerHTML += "<td class = 'tb-key'>" + keys[i] + "</td>" ;
+            if( i < values.length) trs[len - 1].innerHTML += "<td class = 'tb-value'>" + values[i] + "</td>";
+        }
+        for(var j = keys.length; j < values.length; j++){
+            trs[len - 1].innerHTML += "<td class = 'tb-value'>" + values[j] + "</td>";
+        }
+    }
+
+    /*填充个人信息表*/
+    function createBasicTable(){
+        var dom = document.getElementById("tb-basic-info");
+        addHead(dom,"个人基本信息")
+        keys = ["姓名：","性别："];
+        values = ["夏佳昊","男"];
+        addTR(dom,keys,values);
+        keys = ["出生日期：","政治面貌："];
+        values = ["1995-12-30","中国共产党员"];
+        addTR(dom,keys,values);
+        keys = ["民族：","籍贯："];
+        values = ["汉族","浙江省-嘉兴市"];
+        addTR(dom,keys,values);
+        keys = ["户口所在地：","毕业院校："];
+        values = ["浙江","同济大学"];
+        addTR(dom,keys,values);
+        keys = ["学历：","学位："];
+        values = ["本科","无"];
+        addTR(dom,keys,values);
+        keys = ["专业：","毕业时间："];
+        values = ["软件工程","2018-06-01"];
+        addTR(dom,keys,values);
+        keys = ["移动电话：","电子邮箱："];
+        values = ["15068206281","1452806@tongji.edu.cn"];
+        addTR(dom,keys,values);
+        keys = ["GPA：","TOP："];
+        values = ["4.42/5.0","18%"];
+        addTR(dom,keys,values);
+    }
+
+    /*填充个人评价表*/
+    function createPerEval() {
+        var dom = document.getElementById("tb-per-eval");
+        addHead(dom,"自我评价");
+        keys = [];
+        values = ["◎ 时间观念强，喜欢有计划的做事。"];
+        addTR(dom,keys,values);
+        keys = [];
+        values = ["◎ 自学能力强，容易接受并理解新知识、新事物。"];
+        addTR(dom,keys,values);
+        keys = [];
+        values = ["◎ 具备软件工程的知识素养，具有熟练的软件开发技能。"];
+        addTR(dom,keys,values);
+        keys = [];
+        values = ["◎ 为人诚实守信，团结同学，做事勤奋、严肃认真，细心，有耐心。"];
+        addTR(dom,keys,values);
+        keys = [];
+        values = ["◎ 表达能力较弱，英语水平有待提高。"];
+        addTR(dom,keys,values);
+        keys = [];
+        values = ["◎ 个人主义较强，团队协作有待提高。"];
+        addTR(dom,keys,values);
+    }
+
+    /*填充教育经历表*/
+    function createEdu(){
+        var dom = document.getElementById("tb-edu");
+        addHead(dom,"教育经历");
+        keys = ["开始时间："];
+        values = ["2014-09-01"];
+        addTR(dom,keys,values);
+        keys = ["结束时间："];
+        values = ["至今"];
+        addTR(dom,keys,values);
+        keys = ["学校时间："];
+        values = ["同济大学"];
+        addTR(dom,keys,values);
+        keys = ["学历："];
+        values = ["本科"];
+        addTR(dom,keys,values);
+        keys = ["专业："];
+        values = ["软件工程"];
+        addTR(dom,keys,values);
+    }
+
+    /*填充实习经历*/
+    function createPractice(){
+        var dom = document.getElementById("tb-practice");
+        addHead(dom,"实习经历");
+        keys = ["实习公司："];
+        values = ["侬泰轲科技有限公司"];
+        addTR(dom,keys,values);
+        keys = ["开始时间："];
+        values = ["2016-07"];
+        addTR(dom,keys,values);
+        keys = ["结束时间："];
+        values = ["2016-08"];
+        addTR(dom,keys,values);
+        keys = ["项目负责人："];
+        values = ["潘永东"];
+        addTR(dom,keys,values);
+        keys = ["工作描述："];
+        values = ["	1、将c++版本的电机控制系统重构成c#版本的<br />\
+                    2、基于底层硬件设备，利用c#开发超声波系统对超声波数据进行采集、处理和可视化呈现。<br/>\
+                    3、利用多线程技术合并电机系统和超声波系统"];
+        addTR(dom,keys,values);
+    }
+
+    /*填充项目经历*/
+    function createProjects(){
+        var dom = document.getElementById("tb-projects");
+        addHead(dom,"主要项目经历");
+        keys = ["项目名称："];
+        values = ["期货分析预测系统"];
+        addTR(dom,keys,values);
+        keys = ["项目简介："];
+        values = ["这是一个挑战杯的参赛系统，主要功能是基于数据挖掘对期货历史数据进行分析并预测未来走势"];
+        addTR(dom,keys,values);
+        keys = ["指导老师："];
+        values = ["同济大学饶魏雄教授"];
+        addTR(dom,keys,values);
+        keys = ["开发时间："];
+        values = ["2016-10~2017-01"];
+        addTR(dom,keys,values);
+        keys = ["主要工作："];
+        values =  ["1、利用html、css、Jquery进行网页的开发<br />\
+                    2、利用ajax跨域请求新浪财经接口获取实时交易信息<br/>\
+                    3、利用echarts进行期货数据可视化<br/>\
+                    4、利用node.js进行前后端的通信"];
+        addTR(dom,keys,values);
+    }
+
+    /*填充获奖情况表*/
+    function createWin(){
+        var dom = document.getElementById("tb-win");
+        addHead(dom,"获奖情况");
+        keys = ["2016："];
+        values = ["挑战杯校二等奖；国家励志奖学金；学校奖学金三等奖"];
+        addTR(dom,keys,values);
+        keys = ["2015："];
+        values = ["学校奖学金二等奖"];
+        addTR(dom,keys,values);
+    }
+
+    /*填充主要技能*/
+    function createSkills(){
+        var dom = document.getElementById("tb-skills");
+        addHead(dom,"主要技能");
+        keys = ["编程语言："];
+        values = ["C/C++/C#,Java,HTML/CSS/CSS3/HTML5/JS/JQuery,Ajax"];
+        addTR(dom,keys,values);
+        keys = ["编程环境："];
+        values = ["Notepad++,Webstorm,VS,Eclipse,Pycharm,Jupyter"];
+        addTR(dom,keys,values);
+        keys = ["数据可视化："];
+        values = ["Echarts,TeeCharts"];
+        addTR(dom,keys,values);
+
+    }
+
+    createBasicTable();
+    createPerEval();
+    createEdu();
+    createPractice();
+    createProjects();
+    createWin();
+    createSkills();
+
+
+</script>
+</html>

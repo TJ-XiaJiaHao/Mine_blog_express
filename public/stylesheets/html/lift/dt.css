@@ -1,0 +1,149 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:'Microsoft Yahei';
+	background:white;
+}
+/*电梯总样式*/
+#container{
+	width:1050px;
+	height:418px;
+	margin:50px 0 0 20px;
+	float:left;
+}
+#container  li{
+	list-style:none;
+	float:left;
+	width:208px;
+	height:400px;
+}
+/*单个电梯样式*/
+#ele{
+	width:200px;
+	height:420px;
+}
+/*电梯顶部LED灯样式*/
+#container #ele #led{
+	margin-left:1px;
+	width:200px;
+	height:8px;
+	margin-bottom:10px;
+}
+#container #ele #led li{
+	float:left;
+	width:6px;
+	height:6px;
+	border:1px solid gray;
+	border-radius:5px;
+	list-style:none;
+	margin-right:2px;
+}
+#container #ele #led li:nth-of-type(1){
+	background:#7FFF00;
+}
+/*电梯信息板样式*/
+#info{
+	width:200px;
+	height:90px;
+	border:1px solid gray;
+	margin-bottom:10px;
+}
+#info #name,#Info #con{
+	width:100px;
+	float:left;
+}
+#info #name li,#info #con li{
+	list-style:none;
+	font-size:14px;
+	line-height:14px;
+	width:95px;
+	height:15px;
+	float:left;
+}
+#info #name li{
+	text-align:right;
+	margin-right:10px;
+}
+/*电梯内部按钮样式*/
+#inner_btn{
+	width:200px;
+	height:85px;
+	border:1px solid gray;
+	margin-top:10px;
+}
+#inner_btn ul li{
+	//font-weight:bold;
+	list-style:none;
+	float:left;
+	width:20px;
+	height:20px;
+	border:1px solid white;
+	margin-left:3px;
+	margin-top:5px;
+	text-align:center;
+	line-height:20px;
+	border-radius:50px;
+	cursor:pointer;
+	transition:0.02s;
+}
+#inner_btn ul #close,#inner_btn ul #open{
+	width:32px;
+	font-weight:bold;
+}
+#inner_btn ul #help{
+	color:white;
+	background:rgba(0,0,0,0.2);
+}
+/*楼层按钮样式*/
+#btn{
+	float:left;
+	width:165px;
+	height:205px;
+	margin:150px 0 0 20px;
+	border-top:1px solid gray;
+	border-left:1px solid gray;
+}
+#btn li{
+	list-style:none;
+	width:40px;
+	height:40px;
+	border-bottom:1px solid gray;
+	border-right:1px solid gray;
+	float:left;
+}
+#btn li #label{
+	width:20px;
+	height:40px;
+	//background:gray;
+	font-size:15px;
+	line-height:40px;
+	float:left;
+}
+#btn li #up{
+	width:16px;
+	height:20px;
+	float:left;
+	//background:red;
+	line-height:17px;
+	transform:rotate(-90deg);
+	cursor:pointer;
+	//font-weight:bold;
+	padding-left:4px;
+}
+#btn li #down{
+	//font-weight:bold;
+	width:16px;
+	height:20px;
+	float:left;
+	//background:green;
+	transform:rotate(90deg);
+	line-height:16px;
+	cursor:pointer;
+	padding-left:4px;
+}
+#btn li:nth-of-type(1) #up{
+	margin-top:10px;
+}
+#btn li:nth-of-type(20) #down{
+	margin-top:10px;
+}
