@@ -1,0 +1,106 @@
+body{
+	background-color:black;
+	margin:0px;
+	padding:0px;
+}
+*{
+	list-style:none;
+}
+#list{
+	width:800px;
+	height:360px;
+	margin:300px auto 30px;
+	padding:0px;
+	perspective:1000px;   	/*???*/
+	box-shadow:0px 0px 20px white;   /**/
+}
+#list li{
+	position:relative;
+	float:left;
+	width:20px;
+	height:360px;
+	transform-style:preserve-3d;             /**/
+	transition:1s;
+	transform-origin:center center -180px;
+}
+#list li a{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+#list li a:nth-of-type(1){    /**/
+	left:0;
+	top:0;
+	background-color:green;
+	background-image:url("images/1.jpg");  
+}
+#list li a:nth-of-type(2){
+	top:-100%;
+	left:0;
+	background-color:yellow;
+	transform:rotateX(90deg);
+	transform-origin:bottom;
+	background-image:url("images/2.jpg");  
+}
+#list li a:nth-of-type(3){
+	left:0;
+	top:0;
+	background-color:red;
+	transform:translateZ(-360px);
+	background-image:url("images/3.jpg");  
+}
+#list li a:nth-of-type(4){
+	top:100%;
+	background-color:blue;
+	transform:rotateX(-90deg);
+	transform-origin:top;
+	background-image:url("images/4.jpg");  
+}
+#btn{
+	color:white;
+	font-family:Microsoft Yahei;
+}
+#btn li{
+	float:left;
+	margin-left:50px;
+}
+#list:hover li{
+	transform:rotateX(360deg);
+}
+#btn{
+	color:white;
+	text-align:center;
+}
+#btn a{
+	width:30px;
+	height:30px;
+	display:inline-block;
+	font:italic bold 14px/30px 'Microsoft Yahei';
+	text-decoration:none;
+	border-radius:100%;
+	cursor:pointer;
+	margin-left:20px;
+}
+.fir{
+	background-color:#ff3300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
