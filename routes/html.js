@@ -42,5 +42,8 @@ router.get('/nav', function(req, res) {
 router.get('/tianmao', function(req, res) {
     res.render('html/tianmao', { title: 'tianmao' });
 });
+router.get('/blog', function(req, res) {
+    res.render('html/blog', { title: 'blog' });
+});
 
 module.exports = router;

@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人博客</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/html/blog/blog.css" />
+</head>
+<body>
+    <div id="header">
+        <label>Hugo的个人网站</label>
+    </div>
+
+    <!--导航栏-->
+    <div id="nav">
+        <ul>
+            <li>Home</li>
+            <li>Github</li>
+            <li>ZhiHu</li>
+            <li>DouBan</li>
+            <li>WeiBo</li>
+            <li>公众号</li>
+        </ul>
+    </div>
+
+    <!--主体部分-->
+    <div id="main">
+
+        <!--个人信息栏-->
+        <div id="basic-info-box">
+        </div>
+        <div id="basic-info">
+            <img id="pic" src="/images/html/blog/head.png"/>
+            <label id="name">Hugo Xie</label>
+            <label id="description">Front End Developer</label>
+            <label id="money">如果觉得文章还不错，可以点击打商</label>
+        </div>
+
+        <!--博客内容-->
+        <div id="con">
+            <div id="con-body">
+                <h3 id="con-title">一段有趣的代码引发的思考</h3>
+                <p>今天无意间看见一个有趣的代码，原本以为直接就看见了结果，谁知道发现自己预测的结果与运行的结果不一样，我们先来看一下代码吧</p>
+
+                <h4 class="con-small-title">下面就是这段有趣的代码</h4>
+
+                <div class="code">
+                    <pre>
+        var foo = {n:1};
+        (function(foo){
+            console.log(foo.n);
+            foo.n = 3;
+            var foo = {n:2}
+            console.log(foo.n);
+        })(foo);
+        console.log(foo.n)</pre>
+                </div>
+                <p>上面的代码会输出</p>
+                <h4 class="con-small-title">1,2,3</h4>
+                <p>如果你一眼就看出来输出的是1,2,3，那么就没有必要往下看了。反正当我看到运行结果的时候吓了我一跳，怎么会。</p>
+                <h4 class="con-small-title">分析</h4>
+                <p>首先我们用对象字面量的方式定义了一个对象foo，然后是立即执行函数，传入的参数就是我们一开始定义的foo对象，然后在立即执行函数里面我们也定义了一个局部变量，这个局部变量也叫作foo，而且是var声明的 ，所以这时候var声明的这个foo就会发生变量的声明提升，按照原来来说这时候立即执行函数里应该是这样的</p>
+
+                <div class="code">
+                    <pre>
+        (function(foo){
+            var foo;
+            console.log(foo.n);
+            foo.n = 3;
+            var foo = {n:2}
+            console.log(foo.n);
+        })(foo);</pre>
+                </div>
+
+                <p>我看到这里的时候第一个反应是这里的foo只是生命了啊，那么第一个console当然应该输出的undefined啊，然而这个console却输出了1，这是为什么呢，这就要知道变量的声明了，这里其实因为还传入了一个参数foo，而这个foo是已经定义了n=1的，其实这一段代码等于是在var foo;的上面还有一段隐藏的foo={n:1};这是后我们就需要测试一下了，重复声明会覆盖掉之前的值吗？可以运行一下下面这个小例子试一下</p>
+                <div class="code">
+                    <pre>
+        var a = "test";
+        var a;
+        console.log(a);</pre>
+                </div>
+                <p>这里的console.log(a)输出的是test并不是undefined。所以这里可以看出变量声明和赋值是两回事，只有当在声明变量的时候没有给变量赋值，js引擎才会给这个变量赋一个undefined。</p>
+
+
+            </div>
+          </div>
+    </div>
+
+</body>
+</html>

@@ -73,4 +73,7 @@ $(document).ready(function(){
     $("#tianmao").click(function(){
         window.open("/html/tianmao");
     });
+    $("#blog").click(function(){
+        window.open("/html/blog");
+    });
 });
