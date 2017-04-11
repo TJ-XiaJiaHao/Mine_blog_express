@@ -1,0 +1,319 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>个人主页</title>
+    <meta charset="utf-8">
+    <link href="/stylesheets/nav.css" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/home/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/home/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/nav.js"></script>
+
+    <!-- skills -->
+    <script src="/javascripts/home/pie-chart.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#demo-pie-1').pieChart({
+                barColor: '#10A7AF',
+                trackColor: '#fff',
+                lineCap: 'round',
+                lineWidth: 8,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+
+            $('#demo-pie-2').pieChart({
+                barColor: '#10A7AF',
+                trackColor: '#fff',
+                lineCap: 'butt',
+                lineWidth: 8,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+
+            $('#demo-pie-3').pieChart({
+                barColor: '#10A7AF',
+                trackColor: '#fff',
+                lineCap: 'square',
+                lineWidth: 8,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+
+            $('#demo-pie-4').pieChart({
+                barColor: '#10A7AF',
+                trackColor: '#fff',
+                lineCap: 'square',
+                lineWidth: 8,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+        });
+    </script>
+
+    <!-- skills -->
+    <script type="text/javascript" src="/javascripts/home/numscroller-1.0.js"></script>
+
+</head>
+<body>
+
+<!--nav-->
+<nav id="nav">
+    <ul>
+        <li class="nav-choosed" id="nav-home">个人主页</li>
+        <li id="nav-note">课程笔记</li>
+        <li id="nav-projects">实战项目</li>
+        <li id="nav-html">网站专区</li>
+        <li id="nav-course">教程专区</li>
+    </ul>
+</nav>
+<div id="nav-bg"></div>
+
+<!--basic info -->
+<div class="header">
+    <div class="container">
+        <div class="col-md-8 header-left">
+            <div class="col-sm-5 pro-pic">
+                <img class="img-responsive" src="/images/home/pic1.jpg" alt=" "/>
+            </div>
+            <div class="col-sm-5 pro-text">
+                <h1>夏佳昊</h1>
+                <p>同济大学14级本科生</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-md-4 header-right ">
+            <ul class="list-left">
+                <li>邮箱:</li>
+                <li>手机号:</li>
+                <li>地址: </li>
+                <li>详细简历: </li>
+            </ul>
+            <ul class="list-right">
+                <li><a href="mailto:info@example.com">1452806@tongji.edu.cn</a></li>
+                <li>150-6820-6281</li>
+                <li>上海市嘉定区曹安公路4800号</li>
+                <li><a href="/home/info">点此查看</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- about -->
+<div id="about" class="about">
+    <div class="container">
+        <h3 class="tittle">个人介绍</h3>
+        <p class="abt-para">我是一个时间观念很强的人，喜欢有计划的做事，且自学能力较强，容易接受并接受新知识、新事物。</p>
+    </div>
+    <div class="col-md-6 abt-left ">
+        <h2>教育经历</h2>
+        <div class="accordion">
+            <div class="accordion-section">
+                <h5><a class="accordion-section-title" href="#accordion-1">
+                        <span>2014 - 至今</span> 中国-同济大学<div class="clearfix"></div>
+                    </a></h5>
+                <div id="accordion-1" class="accordion-section-content">
+                    <h6>获奖情况-2016</h6>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">挑战杯校二等奖</a></li>
+                        <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">国家励志奖学金</a></li>
+                        <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">学校奖学金三等奖</a></li>
+                    </ul>
+                    <h6>获奖情况-2015</h6>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><a href="#">学校奖学金二等奖</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            jQuery(document).ready(function() {
+                function close_accordion_section() {
+                    jQuery('.accordion .accordion-section-title').removeClass('active');
+                    jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+                }
+
+                jQuery('.accordion-section-title').click(function(e) {
+                    // Grab current anchor value
+                    var currentAttrValue = jQuery(this).attr('href');
+
+                    if(jQuery(e.target).is('.active')) {
+                        close_accordion_section();
+                    }else {
+                        close_accordion_section();
+
+                        // Add active class to section title
+                        jQuery(this).addClass('active');
+                        // Open up the hidden content panel
+                        jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+                    }
+
+                    e.preventDefault();
+                });
+            });
+        </script>
+    </div>
+    <div class="col-md-6 abt-right ">
+        <div class="col-sm-4 abt-gd-left text-center">
+            <div id="demo-pie-1" class="pie-title-center" data-percent="75"> <span class="pie-value"></span> </div>
+            <h4>HTML & CSS</h4>
+        </div>
+
+        <div class="col-sm-4 abt-gd-left text-center">
+            <div id="demo-pie-3" class="pie-title-center" data-percent="75"> <span class="pie-value"></span> </div>
+            <h4>Java Script</h4>
+        </div>
+        <div class="col-sm-4 abt-gd-left text-center">
+            <div id="demo-pie-4" class="pie-title-center" data-percent="15"> <span class="pie-value"></span> </div>
+            <h4>UI Designer</h4>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<!-- 项目经历 -->
+<div class="employment">
+    <div class="container">
+        <h3 class="tittle ">项目经历</h3>
+        <p  class="abt-para ">以下主要罗列出我在几个比较完整的项目中的主要工作</p>
+        <div class="col-md-6 employ-left">
+            <h4>01</h4>
+        </div>
+        <div class="col-md-6 employ-right">
+            <h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>期货分析预测系统</h5>
+            <p>利用html、css、Jquery进行网页的开发<br/>
+                利用ajax跨域请求新浪财经接口获取实时交易信息<br/>
+                利用echarts进行期货数据可视化<br/>
+                利用node.js进行前后端的通信</p>
+        </div>
+        <div class="col-md-6 employ-left2">
+            <h5>超声波探伤系统<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></h5>
+            <p>将c++版本的电机控制系统重构成c#版本的<br/>
+                利用c#对超声波数据进行采集、处理和可视化呈现<br/>
+                利用多线程技术合并电机系统和超声波系统 </p>
+        </div>
+        <div class="col-md-6 employ-right2">
+            <h4>02</h4>
+        </div>
+        <div class="col-md-6 employ-left ">
+            <h4>03</h4>
+        </div>
+        <div class="col-md-6 employ-right">
+            <h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>二手书交易平台</h5>
+            <p>利用c#进行后端逻辑的实现<br/>
+                利用.net的cshtml整合前端开发人员的纯前端网站<br/>
+                利用razor语言进行前后端交互的整合</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- more skills -->
+<div class="more">
+    <div class="container">
+        <h3 class="tittle ">Skills</h3>
+        <div class="col-md-6 skills-bars ">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 30%">HTML & CSS
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning " style="width: 60%">
+                    <span class="sr-only"></span>
+                </div>
+                <p>90%</p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success1" style="width: 30%">HTML5 & CSS3
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning1" style="width: 20%">
+                    <span class="sr-only"></span>
+                </div>
+                <p>50%</p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success3" style="width: 30%">JS & JQuery
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning3 " style="width: 55%">
+                    <span class="sr-only"></span>
+                </div>
+                <p>85%</p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success2" style="width: 30%">Ajax
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning2" style="width: 35%">
+                    <span class="sr-only"></span>
+                </div>
+                <p>65%</p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="progress ">
+                <div class="progress-bar progress-bar-success4" style="width: 30%">C & C++ & C#
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning4" style="width: 30%">
+                    <span class="sr-only"></span>
+                </div>
+                <p>60%</p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="progress no-marg">
+                <div class="progress-bar progress-bar-success5" style="width: 30%">Java & Java EE
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+                <div class="progress-bar progress-bar-warning5" style="width: 15%">
+                    <span class="sr-only"></span>
+                </div>
+                <p>45%</p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- contact -->
+<div id="emailme" class="contact">
+    <div class="container">
+        <p class="copy-right">@谢谢观看~</p>
+        <p class="abt-para">有任何疑问或者建议可以发送邮件到1452806@tongji.edu.cn</p>
+    </div>
+</div>
+
+<!--scrolling js-->
+<script src="/javascripts/scroll/jquery.nicescroll.js"></script>
+<script src="/javascripts/scroll/scripts.js"></script>
+
+<!-- smooth scrolling -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+
+</body>
+</html>
