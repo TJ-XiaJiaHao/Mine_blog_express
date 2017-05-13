@@ -45,5 +45,8 @@ router.get('/tianmao', function(req, res) {
 router.get('/blog', function(req, res) {
     res.render('html/blog', { title: 'blog' });
 });
+router.get('/showProduct3D', function(req, res) {
+    res.render('html/showProduct3D', { title: 'showProduct3D' });
+});
 
 module.exports = router;

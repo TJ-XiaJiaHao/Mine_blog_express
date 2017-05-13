@@ -6,7 +6,7 @@ $(document).ready(function(){
        location.href = "/";
    });
     $("#nav-note").click(function(){
-        location.href = "/html";
+        location.href = "/notes";
     });
     $("#nav-projects").click(function(){
         location.href = "/html";

@@ -2,37 +2,55 @@
  * Created by Administrator on 2017/3/29.
  */
 $(document).ready(function(){
+
+
+
     /*点击二级导航栏筛选对应模块*/
-    $("#nav-second ul li").click(function(){
+    appear($(".box-ul"));
+    function appear(dom){
+        dom.css("display","block");
+        dom.animate({
+            marginLeft: '0',
+            opacity:'1'
+        }, {
+            easing: 'swing',
+            duration: 500,
+            complete: function () {
+            }
+        });
+    }
+    function disappear(dom){
+        dom.css("display","none");
+        dom.animate({
+            marginLeft: '50px',
+            opacity:'0'
+        }, {
+            easing: 'swing',
+            duration: 0,
+            complete: function () {
+            }
+        });
+    }
+    $("#nav-second ul li").click(function() {
         /*修改导航栏样式*/
         $(this).find("label").addClass("nav-second-choosed");
         $(this).siblings().find("label").removeClass("nav-second-choosed");
 
         /*修改显示内容*/
         var eg = $(this).index();
-        if(eg == 0){
-            $(".box").css("display","block");
+        if (eg == 0) {
+            appear($(".box-ul"));
             return;
         }
-        $(".box").css("display","none");
-        $(".box").eq(eg - 1).css("display","block");
+        disappear($(".box-ul"));
+        appear($(".box").eq(eg - 1).find(".box-ul"));
     });
 
 
-    /*点击标题展开或收起对应模块*/
-    $(".head-title label").attr("title","点此收起")
-    $(".head-title").click(function(){
-        var current = $(this).parent().find("ul").css("display");
-        if(current == "block"){
-            $(this).parent().find("ul").css("display","none");
-            $(this).find("label").attr("title","点此展开");
-        }
-        else {
-            $(this).parent().find("ul").css("display","block");
-            $(this).find("label").attr("title","点此收起");
-        }
-    });
 
+
+
+    /*跳转链接*/
     $("#clock").click(function(){
         //location.href = "/html/clock";
         window.open("/html/clock");
@@ -75,5 +93,8 @@ $(document).ready(function(){
     });
     $("#blog").click(function(){
         window.open("/html/blog");
+    });
+    $("#showProduct").click(function(){
+        window.open("/html/showProduct3D");
     });
 });

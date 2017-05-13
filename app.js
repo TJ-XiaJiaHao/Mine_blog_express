@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var cqssc = require('./routes/cqssc');
 var web = require('./routes/html');
 var futures = require('./routes/futures');
+var notes = require('./routes/notes');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use('/users', users);
 app.use('/cqssc',cqssc);
 app.use('/html',web);
 app.use('/html/futures',futures);
+app.use('/notes',notes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

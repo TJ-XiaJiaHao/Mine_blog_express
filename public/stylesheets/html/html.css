@@ -63,6 +63,8 @@
 }
 .box-ul{
     width:100%;
+    margin-left:50px;
+    opacity:0;
 }
 
 
@@ -104,7 +106,7 @@
 }
 .men label{
     display:inline-block;
-    width:35%;
+    width:180px;
     height:50px;
     line-height:50px;
     border:4px solid white;

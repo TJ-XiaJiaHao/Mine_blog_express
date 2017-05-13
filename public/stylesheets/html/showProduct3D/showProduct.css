@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+}
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	height:100%;
+	width:100%;
+	background:#000;
+}
+
+/*黄金分割*/
+#platform{
+	width:120px;
+	height:180px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-90px 0 0 -60px;
+	
+	transform-style:preserve-3d;
+	-webkit-transform-style: preserve-3d;	
+
+	transform:rotateY(0deg) rotateX(45deg);
+	perspective-origin: center center;
+	
+}
+#platform img{
+	width:120px;
+	height:180px;
+	position:absolute;
+	border-radius:3px;
+	box-shadow:0 0 10px #fff;
+	transition:all 0.2s;
+	-webkit-box-reflect:below 1px -webkit-linear-gradient(transparent,transparent 60%,rgba(0,0,0,0.2)); /*倒影,线性渐变*/
+}
